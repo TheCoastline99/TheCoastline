@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ma page avec trois images remplaçables centrées et une piste sonore</title>
+	<style>
+		.images-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.images-container img {
+			max-width: 100%;
+			margin: 10px;
+		}
+	</style>
+	<script>
+		function remplacerImage(img1, img2) {
+			img1.style.display = "none";
+			img2.style.display = "block";
+			window.scrollTo(0,0);
+		}
+	</script>
+</head>
+<body>
+	<audio autoplay>
+  		<source src="C:\Users\giaco\Desktop\Midjourney CO\The Last Waltz.mp3" type="audio/mpeg">
+	</audio>
+	<h1 style="text-align: center;">Ma page avec trois images remplaçables centrées et une piste sonore</h1>
+	<div class="images-container">
+		<img src="C:\Users\giaco\Desktop\Midjourney CO\Rodrick.png" alt="Première image" id="premiere-image" onclick="remplacerImage(this, document.getElementById('deuxieme-image'))">
+		<img src="C:\Users\giaco\Desktop\Midjourney CO\krush.png" alt="Deuxième image" id="deuxieme-image" style="display:none" onclick="remplacerImage(this, document.getElementById('troisieme-image'))">
+		<img src="C:\Users\giaco\Desktop\Midjourney CO\Karoom.png" alt="Troisième image" id="troisieme-image" style="display:none" onclick="remplacerImage(this, document.getElementById('premiere-image'))">
+	</div>
+</body>
+</html>
